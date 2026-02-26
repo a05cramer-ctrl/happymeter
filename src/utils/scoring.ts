@@ -1,4 +1,4 @@
-import { RiskBand } from '../types';
+import type { RiskBand } from '../types';
 
 export function getRiskBand(score: number): RiskBand {
   if (score >= 75) return 'low';

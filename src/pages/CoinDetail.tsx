@@ -127,7 +127,7 @@ export default function CoinDetail() {
                   contentStyle={{ background: '#0f172a', border: '1px solid #1e293b', borderRadius: 8 }}
                   labelStyle={{ color: '#94a3b8', fontSize: 12 }}
                   itemStyle={{ color: CHART_COLOR }}
-                  formatter={(v: number) => [formatPrice(v), 'Price']}
+                  formatter={(v: number | undefined) => [v != null ? formatPrice(v) : '', 'Price']}
                 />
                 <Area
                   type="monotone"
@@ -158,7 +158,7 @@ export default function CoinDetail() {
                   contentStyle={{ background: '#0f172a', border: '1px solid #1e293b', borderRadius: 8 }}
                   labelStyle={{ color: '#94a3b8', fontSize: 12 }}
                   itemStyle={{ color: '#0ea5e9' }}
-                  formatter={(v: number) => [formatVolume(v), 'Volume']}
+                  formatter={(v: number | undefined) => [v != null ? formatVolume(v) : '', 'Volume']}
                 />
                 <Bar dataKey="volume" fill="#0ea5e9" radius={[3, 3, 0, 0]} opacity={0.85} />
               </BarChart>

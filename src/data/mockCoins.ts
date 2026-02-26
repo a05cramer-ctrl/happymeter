@@ -1,4 +1,4 @@
-import { Coin } from '../types';
+import type { Coin } from '../types';
 
 function generatePriceHistory(basePrice: number, days = 30): { time: string; price: number }[] {
   const points = [];

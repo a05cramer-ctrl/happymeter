@@ -2,9 +2,8 @@ import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, ChevronUp, ChevronDown, ChevronsUpDown, Filter } from 'lucide-react';
 import { mockCoins } from '../data/mockCoins';
-import { SortField, SortDirection, RiskBand } from '../types';
+import type { SortField, SortDirection, RiskBand } from '../types';
 import { formatPrice, formatVolume, formatNumber, getRiskBand, getRiskColor, getRiskLabel } from '../utils/scoring';
-import ScoreGauge from '../components/ScoreGauge';
 
 type FilterBand = 'all' | RiskBand;
 
